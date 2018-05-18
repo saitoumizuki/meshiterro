@@ -4,7 +4,7 @@
       <div class="col-md-8 col-sm-offset-2">
         <div class="masonry-wrapper-cols">
           <div class="masonry-gutter"></div>
-         <% @post_images.each do |post_image| %>
+          <% @post_images.each do |post_image| %>
             <div class="masonry-block">
               <div class="block block-image v1">
                 <div class="block-image">
@@ -17,17 +17,18 @@
                 <div class="block-content">
                   <%= image_tag('sample-author1.jpg', class: "img-circle pull-left profile-thumb") %>
                   <h3 class="block-title">
-         <%= link_to post_image_path(post_image.id) do %>
-                     <i class="fa fa-map-marker"></i><%= post_image.shop_name %>
-         <% end %>
+                    <%= link_to post_image_path(post_image.id) do %>
+                      <i class="fa fa-map-marker"></i><%= post_image.shop_name %>
+                    <% end %>
                   </h3>
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
-                    <li>By
+                    <li>
+                      By
                       <%= post_image.user.name %>
                     </li>
                     <li>
-                    <a href="#">23 コメント</a>
+                      <a href="#">23 コメント</a>
                     </li>
                   </ul>
                 </div>
@@ -39,3 +40,4 @@
     </div>
   </div>
 </section>
+<%= paginate @post_images, class: "pagenate" %>
