@@ -6,4 +6,8 @@ class UsersController < ApplicationController
 	def edit
 		@user = User.find(params[:id])
 	end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 2d2ac4b68b1b83103fe47489de945b6aa228e826
